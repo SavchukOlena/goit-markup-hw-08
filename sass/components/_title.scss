@@ -1,0 +1,5 @@
+@mixin title ($fs: 36px, $lh: 1.17, $cl: #212121) {
+    font-size: $fs;
+    line-height: $lh;
+    color: $cl;
+}
