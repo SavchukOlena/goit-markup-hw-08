@@ -18,8 +18,7 @@
     <header class="header header--fixed">
         <div class="container header__container">
             <a class="logo logo--positioned link" href="/" lang="en">Web<span class="logo__span">Studio</span></a>
-            <!-- Навигация сайта -->
-            <div class="content-menu">
+            <div class="tablet-desk-menu">
                 <nav>
                     <ul class="site-nav list">
                         <li class="site-nav__item">
@@ -33,7 +32,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!----- Contacts-list ------>
                 <ul class="contacts-list list">
                     <li class="contacts-list__item">
                         <a class="contacts-list__link link" href="mailto:info@devstudio.com">
@@ -52,14 +50,68 @@
                     </li>
                 </ul>
             </div>
-            <button class="header-button" type="button">
-                <svg class="header-button__icon" width="40" height="40">
-                    <use href="./images/icons.svg#icon-menu"></use>
-                    <use href="./images/icons.svg#icon-close"></use>
-                </svg>
-            </button>
+
+            
+                <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+                    <svg class="menu-button__icon-menu" width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle menu-toggle-close js-close-menu" type="button">
+                        <svg class="menu-button__icon-close" width="40" height="40">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <nav class="mob-nav">
+                        <ul class="mob-nav-list list">
+                            <li class="mob-nav-list__item">
+                                <a class="mob-nav-list__link mob-nav-list__link--current link" href="">Студия</a>
+                            </li>
+                            <li class="mob-nav-list__item">
+                                <a class="mob-nav-list__link link" href="./portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="mob-nav-list__item">
+                                <a class="mob-nav-list__link link" href="">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="mob-contacts-list list">
+                        <li class="mob-contacts-list__item">
+                            <a class="mob-contacts-list__link--blue link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="mob-contacts-list__item">
+                            <a class="mob-contacts-list__link--grey link" href="tel:+380961111111">
+                                +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+
+                    <ul class="mob-social list">
+                        <li class="mob-social__item">
+                            <a class="mob-social__link link" href="">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a class="mob-social__link link" href="">
+                                Twitter</a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a class="mob-social__link link" href="">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a class="mob-social__link link" href="">
+                                LinkedIn</a>
+                        </li>
+                    </ul>
                     
-        </div>
+                </div>
+                        
+            </div>
     </header>
     <main>
         <!-- Hero section -->
@@ -351,7 +403,8 @@
         </section>
         
     </main>
-    <!-- Футер -->
+
+
     <footer class="footer">
         <div class="container footer__container">
             <div class="address-thumb">
@@ -368,8 +421,9 @@
                         </li>
                     </ul>
                 </address>
-            </div>
-            <!-- /* --------JOIN-US------ */ -->
+            </div> 
+            
+
             <div class="join-us join-us--positioned">
                 <b class="join-us__call">
                     присоединяйтесь
@@ -409,8 +463,9 @@
             
                     </li>
                 </ul>
-            </div>
-            <!-- ----------Sign-up-section--------- -->
+            </div>  
+            
+            
             <div class="sign-up">
                 <b class="sign-up__title">Подпишитесь на рассылку</b>
                 <form class="sign-up__form" >

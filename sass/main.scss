@@ -1,11 +1,13 @@
 @import "./utils/variables";
 @import "./utils/reset";
 @import "./utils/common";
+@import "./components/mixins";
 @import "./components/breakpoints";
 @import "./components/page-header";
 @import "./components/contacts-header";
 @import "./components/nav";
 @import "./components/logo";
+@import "./components/mob-menu";
 @import "./components/hero-section";
 @import "./components/button";
 @import "./components/advantages";

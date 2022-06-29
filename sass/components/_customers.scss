@@ -1,8 +1,14 @@
 .customers {
-    @media screen and (max-width: 767px) {
-        padding: 70px 0 60px 0;
+    padding: 70px 0 60px 0;
+
+    @media screen and (min-width:768px) {
+        padding: 60px 0 60px 0;
     }
     
+    @media screen and (min-width:1200px) {
+        padding: 94px 0 94px 0;
+    }
+
         &__title {
                 @include title ();
                 margin-bottom: 30px;
@@ -13,22 +19,24 @@
 .customers-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    gap: 30px;
     
 }
 
 .customers-list__item {
 
-    flex-basis: calc((100% - 4 * 15px)/2);
+    width: calc((100% - 30px) / 2);
     height: 92px;
-    margin: 15px;
+    
+    @media screen and (min-width:768px) {
+        width: calc((100% - 60px) / 3);
+    }
 
-    // width: calc((100% - 150px) / 6);
-    // height: 92px;
+    @media screen and (min-width:1200px) {
+        width: calc((100% - 150px) / 6);
+    }
 
-    //     &:not(:last-child) {
-    //             margin-right: 30px;
-    //         }
+    
 }
 
 .customers-list__link {
