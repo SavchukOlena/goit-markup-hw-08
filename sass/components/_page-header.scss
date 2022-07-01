@@ -1,19 +1,24 @@
 
 .header {
-    position: relative;
-    padding: 16px 0 16px 0;
+    position: relative; 
+    
 }
 
 .header__container {
     position: relative;
     display: flex;
-    align-items: center;
+    border-bottom: 1px solid #ECECEC;      
+}
+
+.tablet-desk-menu {
+    position: relative;
+    display: flex;
 
     @media screen and (max-width:767px) {
-        justify-content: space-between;
-        
-    }    
+        display: none;
+    }
 }
+
 
 
 

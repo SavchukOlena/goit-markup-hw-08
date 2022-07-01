@@ -1,11 +1,11 @@
-.tablet-desk-menu {
-    position: relative;
-}
+
+
 
 .menu-toggle {
-    display: inline-flex;
+    display: block;
     padding: 0;
-    margin: 0;
+    margin-left: auto;
+    margin-top: 10px;
     background-color: transparent;
     border: none;
 
@@ -33,14 +33,13 @@
         }
 }
 
-
-
 .menu-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 1;
     padding: 48px 0 40px 40px;
     border: none;
     background-color: var(--main-bgd-color);
@@ -53,11 +52,26 @@
         transform: translateX(0);
     }
 
+    @media screen and (min-width:768px) {
+        display: none;
+        
+    }
+
+}
+
+.mob-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .mob-nav {
-    margin-bottom: 302px;
+    margin-bottom: 40px;
 }
+
+
 .mob-nav-list__item:not(:last-child) {
     margin-bottom: 32px;
 
