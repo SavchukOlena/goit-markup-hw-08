@@ -52,8 +52,76 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+
+            <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                data-menu-button>
+                <svg class="menu-button__icon-menu" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <div class="mob-menu-wrapper">
+                    <div class="mob-menu-top">
+                        <button class="menu-toggle menu-toggle-close js-close-menu" type="button">
+                            <svg class="menu-button__icon-close" width="40" height="40">
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                        <nav class="mob-nav">
+                            <ul class="mob-nav-list list">
+                                <li class="mob-nav-list__item">
+                                    <a class="mob-nav-list__link mob-nav-list__link--current link" href="">Студия</a>
+                                </li>
+                                <li class="mob-nav-list__item">
+                                    <a class="mob-nav-list__link link" href="./portfolio.html">Портфолио</a>
+                                </li>
+                                <li class="mob-nav-list__item">
+                                    <a class="mob-nav-list__link link" href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mob-menu-bottom">
+                        <ul class="mob-contacts-list list">
+                            <li class="mob-contacts-list__item">
+                                <a class="mob-contacts-list__link--blue link" href="mailto:info@devstudio.com">
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                            <li class="mob-contacts-list__item">
+                                <a class="mob-contacts-list__link--grey link" href="tel:+380961111111">
+                                    +38 096 111 11 11</a>
+                            </li>
+                        </ul>
+            
+                        <ul class="mob-social list">
+                            <li class="mob-social__item">
+                                <a class="mob-social__link link" href="">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="mob-social__item">
+                                <a class="mob-social__link link" href="">
+                                    Twitter</a>
+                            </li>
+                            <li class="mob-social__item">
+                                <a class="mob-social__link link" href="">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="mob-social__item">
+                                <a class="mob-social__link link" href="">
+                                    LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </div>
     
         </div>
+        
     </header>
     <main>
         <!---------------PORTFOLIO-------------->
@@ -73,8 +141,25 @@
                     <li class="gallery__item">                        
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/technokryak.jpg" width="370"
+                                <picture>
+                                    <source
+                                    srcset="./images/tekhnokryak-desk-1x.jpg 1x,
+                                    ./images/tekhnokryak-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/tekhnokryak-tab-1x.jpg 1x,
+                                    ./images/tekhnokryak-tab-2x.jpg 2x" 
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/tekhnokryak-mob-1x.jpg 1x,
+                                    ./images/tekhnokryak-mob-2x.jpg 2x" 
+                                    media="(min-width:320px)">
+
+                                    <img class="gallery__img" 
+                                    src="./images/tekhnokryak-desk-1x.jpg"
+                                    width="370"
                                     alt="Открытый ноутбук с сайтом на мониторе">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -90,8 +175,26 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/new-orlean-bascketball.jpg" width="370"
+                                <picture>
+                                    <source 
+                                    srcset="./images/orlean-desk-1x.jpg 1x,
+                                    ./images/orlean-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/orlean-tab-1x.jpg 1x,
+                                    ./images/orlean-tab-2x.jpg 2x" 
+                                    media="(min-width:768px)">
+
+                                    <source 
+                                    srcset="./images/orlean-mob-1x.jpg 1x,
+                                    ./images/orlean-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+
+                                    <img class="gallery__img" 
+                                    src="./images/orlean-desk-1x.jpg" 
+                                    width="370" 
                                     alt="Спортсмены играют в баскетбол">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -107,8 +210,24 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link"> 
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/seafood.jpg" width="370"
+                                <picture>
+                                    <source srcset="./images/seafood-desk-1x.jpg 1x,
+                                    ./images/seafood-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/seafood-tab-1x.jpg 1x,
+                                    ./images/seafood-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/seafood-mob-1x.jpg 1x,
+                                    ./images/seafood-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+
+                                    <img class="gallery__img"
+                                    src="./images/seafood-desk-1x.jpg" 
+                                    width="370"
                                     alt="Стилизированное изображение лосося с надписью The Seafood">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -124,7 +243,24 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/prime-headphones.jpg" width="370" alt="Черные наушники">
+                                <picture>
+                                    <source srcset="./images/prime-desk-1x.jpg 1x,
+                                    ./images/prime-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/prime-tab-1x.jpg 1x,
+                                    ./images/prime-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/prime-mob-1x.jpg 1x,
+                                    ./images/prime-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                    
+                                    <img class="gallery__img"
+                                    src="./images/prime-desk-1x.jpg" 
+                                    width="370" 
+                                    alt="Черные наушники">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -140,8 +276,24 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/boxes-project.jpg" width="370"
+                                <picture>
+                                    <source srcset="./images/boxes-desk-1x.jpg 1x,
+                                    ./images/boxes-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/boxes-tab-1x.jpg 1x,
+                                    ./images/boxes-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/boxes-mob-1x.jpg 1x,
+                                    ./images/boxes-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+
+                                    <img class="gallery__img"                            
+                                    src="./images/boxes-desk-1x.jpg" 
+                                    width="370"
                                     alt="Белая коробка  и розовая коробка">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -157,7 +309,23 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/inspiration-monitor.jpg" width="370" alt="Монитор компьютера">
+                                <picture>
+                                    <source srcset="./images/inspiration-desk-1x.jpg 1x,
+                                    ./images/inspiration-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/inspiration-tab-1x.jpg 1x,
+                                    ./images/inspiration-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/inspiration-mob-1x.jpg 1x,
+                                    ./images/inspiration-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img class="gallery__img" 
+                                    src="./images/inspiration-desk-1x.jpg" 
+                                    width="370" 
+                                    alt="Монитор компьютера">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -173,7 +341,23 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/limited-edition-journal.jpg" width="370" alt="Разворот журнала">
+                                <picture>
+                                    <source srcset="./images/edition-desk-1x.jpg 1x,
+                                    ./images/edition-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/edition-tab-1x.jpg 1x,
+                                    ./images/edition-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/edition-mob-1x.jpg 1x,
+                                    ./images/edition-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img class="gallery__img"                                
+                                    src="./images/edition-desk-1x.jpg" 
+                                    width="370" 
+                                    alt="Разворот журнала">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -189,7 +373,23 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/lab-project.jpg" width="370" alt="Бирка">
+                                <picture>
+                                    <source srcset="./images/lab-desk-1x.jpg 1x,
+                                    ./images/lab-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/lab-tab-1x.jpg 1x,
+                                    ./images/lab-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/lab-mob-1x.jpg 1x,
+                                    ./images/lab-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img class="gallery__img"                                
+                                    src="./images/lab-desk-1x.jpg" 
+                                    width="370" 
+                                    alt="Бирка">
+                                </picture>
                                 <div class="gallery__layout">
                                     <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                         это позволит посетителю получить
@@ -206,8 +406,23 @@
                     <li class="gallery__item">
                         <a href="" class="gallery__link link">
                             <div class="gallery__thumb">
-                                <img class="gallery__img" src="./images/portfolio-page/growing-business-laptop.jpg" width="370"
+                                <picture>
+                                    <source srcset="./images/grow-buss-desk-1x.jpg 1x,
+                                    ./images/grow-buss-desk-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+
+                                    <source srcset="./images/grow-buss-tab-1x.jpg 1x,
+                                    ./images/grow-buss-tab-2x.jpg 2x"
+                                    media="(min-width:768px)">
+
+                                    <source srcset="./images/grow-buss-mob-1x.jpg 1x,
+                                    ./images/grow-buss-mob-2x.jpg 2x"
+                                    media="(min-width:320px)">
+                                    <img class="gallery__img"                                
+                                    src="./images/grow-buss-desk-1x.jpg" 
+                                    width="370"
                                     alt="Монитор ноутбука с надписью Растущий бизнес">
+                                </picture>
                                     <div class="gallery__layout">
                                         <p class="gallery__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                             это позволит посетителю получить
@@ -309,6 +524,8 @@
         </div>
     
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
 
