@@ -41,6 +41,7 @@ body {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -76,12 +77,12 @@ body {
 
 .header {
   position: relative;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .header__container {
   position: relative;
   display: flex;
-  border-bottom: 1px solid #ECECEC;
 }
 
 .tablet-desk-menu {
@@ -99,7 +100,7 @@ body {
   margin-left: auto;
   flex-direction: column;
   justify-content: start;
-  padding: 21px 0 21px 0;
+  padding: 21px 0 20px 0;
 }
 @media screen and (max-width: 767px) {
   .contacts-list {
@@ -186,7 +187,7 @@ body {
   position: absolute;
   display: block;
   content: "";
-  bottom: -1px;
+  bottom: -2px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -931,7 +932,6 @@ body {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -944,11 +944,10 @@ body {
 
 .modal {
   position: absolute;
-  width: 450px;
+  min-width: 450px;
   height: 609px;
-  top: 388px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
   transform: translate(-50%, -50%);
   border-radius: 4px;
   padding: 40px;
@@ -957,13 +956,17 @@ body {
   animation: modal-pop-up;
   animation-duration: 2000ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 @media screen and (min-width: 768px) {
   .modal {
-    width: 528px;
+    overflow-y: hidden;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
     height: 581px;
-    top: 50%;
-    left: 50%;
   }
 }
 

@@ -1,13 +1,14 @@
 
 .header {
     position: relative; 
+    border-bottom: 1px solid #ECECEC;
     
 }
 
 .header__container {
     position: relative;
     display: flex;
-    border-bottom: 1px solid #ECECEC;      
+        
 }
 
 .tablet-desk-menu {
