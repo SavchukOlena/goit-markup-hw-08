@@ -13,6 +13,11 @@
                 @include title ();
                 margin-bottom: 30px;
                 text-align: center;
+
+                @media screen and (min-width:1200px) {
+                    margin-bottom: 50px;
+                    
+                }
             }
 }
 
