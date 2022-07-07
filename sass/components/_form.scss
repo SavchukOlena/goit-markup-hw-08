@@ -80,25 +80,37 @@
 
 
 .agree {
+    display: inline-flex;
+    align-items: center;
     margin-bottom: 30px;
 }
 
 .agree__label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     color: var(--text-color);
     cursor: pointer;
+
+    @media screen and (min-width:469px) {
+        display: inline-flex; 
+        align-items: center;
+        
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+        
+    }
 }
 
 .agree__span {
-    display: flex;
+    
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 7px;
+    margin-right: 6px;
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-color);
@@ -127,6 +139,6 @@
 }
 
 .agree__terms {
-    margin-left: 3px;
+    margin-left: 2px;
     color: var(--accent-color);
 }

@@ -11,15 +11,27 @@
 
     @media screen and (min-width:1200px) {
         padding: 0;
-        flex-direction: row;
-        margin-left: auto;
+        flex-direction: row;        
+    }
+}
+
+
+.contacts-list__item:first-child {
+    @media screen and (max-width:1199px) {
+        margin-bottom: 10px;
         
+    }
+    
+}
+
+.contacts-list__item+.contacts-list__item {
+    @media screen and (min-width:1200px) {
+        margin-left: 30px;
     }
 }
 
 .contacts-list__item:first-child .contacts-list__link {        
     @media screen and (max-width:1199px) {
-        margin-bottom: 10px;
         padding-top: 21px;
     }               
 }
@@ -27,15 +39,6 @@
 .contacts-list__item:last-child .contacts-list__link {
     @media screen and (max-width:1199px) {
         padding-bottom: 21px;
-    }
-} 
-
-
-
-
-.contacts-list__item+.contacts-list__item { 
-    @media screen and (min-width:1200px) {
-        margin-left: 30px;
     }
 }
 
